@@ -1,0 +1,10 @@
+version: '2'
+services:
+    mab-cms:
+        build: .
+        image: python3-image
+        ports: 
+            - "8000:8000"
+        volumes:
+            - ".:/opt/mab"
+        restart: on-failure
