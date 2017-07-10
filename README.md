@@ -13,6 +13,11 @@ enter 'mab' directory inside 'opt'
 cd /opt/mab
 ```
 
+install virtualenv
+```bash
+pip install virtualenv
+```
+
 create a virtual environment to run your python commands in
 ```bash
 virtualenv venv
