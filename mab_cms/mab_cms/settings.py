@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for mab_cms project.
 
@@ -139,6 +140,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+    ('en', u'English'),
+    ('pt', u'Português'),
+    ('es', u'Español')
+)
+
 
 TIME_ZONE = 'UTC'
 
