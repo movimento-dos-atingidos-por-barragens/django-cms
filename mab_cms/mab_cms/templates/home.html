@@ -5,16 +5,16 @@
 
 {% block content %}
 
-    {% placeholder content or %}
-        <!-- Content Row -->
+    <!-- Content Row -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+              {% placeholder content or %}
                 <p>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at <a href="http://startbootstrap.com/template-categories/unstyled">http://startbootstrap.com/template-categories/unstyled</a>.</p>
+              {% endplaceholder %}
             </div>
         </div>
         <!-- /.row -->
     </div>
 
-    {% endplaceholder %}
 {% endblock content%}
