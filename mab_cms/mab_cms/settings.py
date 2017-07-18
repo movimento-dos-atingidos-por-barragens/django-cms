@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'mptt',
     'djangocms_text_ckeditor',
+    'mab_blog'
 ]
 
 MIDDLEWARE = [

@@ -18,8 +18,17 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from mab_blog.views import view_post, view_category
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('cms.urls')),
+    url(
+        r'^noticia/(?P<slug>[^\.]+).html',
+        view_post,
+        name='view_blog_post'),
+    url(
+        r'^categoria/(?P<slug>[^\.]+).html',
+        view_category,
+        name='view_blog_category')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
