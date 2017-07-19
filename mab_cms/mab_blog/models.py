@@ -5,11 +5,14 @@ from djangocms_text_ckeditor.fields import HTMLField
 
 class Post(models.Model):
     title = models.CharField(max_length=100, unique=True)
+    subtitle = models.CharField(max_length=100, blank=True, null=True)
+    hat = models.CharField(max_length=64, blank=True, null=True)
+    author = models.CharField(max_length=64, blank=True, null=True)
     slug = models.SlugField(max_length=100, unique=True)
-    body = HTMLField()
+    body = HTMLField(blank=True, null=True)
     posted = models.DateField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('mab_blog.Category')
-    cover_image = FilerImageField(null=True, blank=True)
+    cover_image = FilerImageField(blank=True, null=True)
 
     def __str__(self):
         return '%s' % self.title

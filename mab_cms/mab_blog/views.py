@@ -19,4 +19,7 @@ def view_category(request, slug):
         'category': my_category,
         'posts': Post.objects.filter(category=my_category)[:5]
     }
-    return render(request, 'list.html', vars)
+    if slug == 'charge':
+        return render(request, 'list_cartoons.html', vars)
+    else:
+        return render(request, 'list.html', vars)

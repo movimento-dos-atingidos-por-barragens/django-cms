@@ -27,7 +27,7 @@ urlpatterns = [
         view_post,
         name='view_blog_post'),
     url(
-        r'^(?P<slug>(artigo)|(noticia))s/?',
+        r'^(?P<slug>(artigo)|(noticia)|(charge))s/?',
         view_category,
         name='view_blog_category'),
     url(r'^', include('cms.urls'))

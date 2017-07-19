@@ -7,10 +7,10 @@
     <div class="container fill-height">
         <div class="row">
             <div class="col-lg-12">
-              Chapéu
-              <h2>{{ post.title }}</h2>
-              <p>Linha Fina</p>
-              Autor | {{ post.posted|date:"d M, Y" }}
+              <h2>{{ post.hat }}</h2>
+              <h1>{{ post.title }}</h1>
+              <h4>{{ post.subtitle }}</h4>
+              {{ post.author }} | {{ post.posted|date:"d M, Y" }}
               <img src="{{ post.cover_image.url }}">
               {{ post.cover_image.default_caption }} | {{ post.cover_image.author }}
               <p>{{ post.body }}</p>
