@@ -16,7 +16,11 @@ class Post(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return ('view_blog_post', None, { 'slug': self.slug })
+        return ('view_blog_post', None, {
+                                        'slug': self.slug,
+                                        'year': self.posted.year,
+                                        'month': '{0:02d}'.format(self.posted.month),
+                                        'day': '{0:02d}'.format(self.posted.day) })
 
 class Category(models.Model):
     title = models.CharField(max_length=100, db_index=True)
