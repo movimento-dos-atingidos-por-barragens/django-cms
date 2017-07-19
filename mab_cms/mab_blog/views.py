@@ -11,7 +11,7 @@ def view_post(request, year, month, day, slug):
     vars = {
         'post': get_object_or_404(Post, slug=slug)
     }
-    return render(request, 'view_post.html', vars)
+    return render(request, 'post.html', vars)
 
 def view_category(request, slug):
     my_category = get_object_or_404(Category, slug=slug)

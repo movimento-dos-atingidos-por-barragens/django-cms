@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ post.title }}s - MAB{% endblock %}
+
+{% block content %}
+    <!-- Content Row -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <h2>{{ post.title }}</h2>
+              {{ post.body }}
+            </div>
+        </div>
+    </div>
+{% endblock content%}
