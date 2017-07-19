@@ -2,7 +2,9 @@
 	height: 150px;
 	background-color: #d8d8d8;
 	background-image: url("../images/img_header.png");
-	border: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .movimento-dos-atingi {
 	font-family: Lato;
@@ -37,7 +39,6 @@
 	width: 100%;
 }
 
-
 .artigos-not-cias {
 	font-family: Lato;
 	font-size: 18px;
@@ -51,8 +52,8 @@
 }
 
 .mab-navbar-collapse {
-			padding-top: 100px;
-	    text-align: center;
+	padding-top: 100px;
+	text-align: center;
 }
 
 footer {
@@ -60,11 +61,11 @@ footer {
 	height: 140px;
 	color: #ffffff;
 	background-color: #009a4f;
-	border: solid 1px #979797;
-	position:absolute;
-	bottom:0;
-	left:0;
-  margin-bottom: 0;
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
 }
 
 .navbar-nav>li>a {
@@ -72,11 +73,14 @@ footer {
 }
 
 .navbar-nav>li {
-
 	content: " | " !important;
 	line-height: 4px;
 }
 
 .navbar-nav>li:last-child {
 	border-right: none;
+}
+
+.fill-height {
+	min-height: 400px;
 }
