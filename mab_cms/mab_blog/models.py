@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import permalink
 from filer.fields.image import FilerImageField
 from djangocms_text_ckeditor.fields import HTMLField
+from taggit.managers import TaggableManager
 
 class Post(models.Model):
     title = models.CharField(max_length=100, unique=True)
@@ -12,6 +13,7 @@ class Post(models.Model):
     body = HTMLField(blank=True, null=True)
     posted = models.DateField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('mab_blog.Category')
+    tags = TaggableManager(blank=True)
     cover_image = FilerImageField(blank=True, null=True)
 
     def __str__(self):

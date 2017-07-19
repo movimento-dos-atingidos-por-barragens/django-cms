@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'mptt',
     'djangocms_text_ckeditor',
+    'taggit',
     'mab_blog'
 ]
 
@@ -154,6 +155,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+TAGGIT_CASE_INSENSITIVE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
