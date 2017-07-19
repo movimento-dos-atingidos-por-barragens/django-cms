@@ -7,7 +7,7 @@ def index(request):
         'posts': Post.objects.all()[:5]
     })
 
-def view_post(request, slug):   
+def view_post(request, year, month, day, slug):
     return render_to_response('view_post.html', {
         'post': get_object_or_404(Post, slug=slug)
     })

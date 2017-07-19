@@ -22,13 +22,13 @@ from mab_blog.views import view_post, view_category
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('cms.urls')),
     url(
-        r'^noticia/(?P<slug>[^\.]+).html',
+        r'^(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/(?P<day>[0-9]{2})/(?P<slug>[^\.]+)/?',
         view_post,
         name='view_blog_post'),
     url(
-        r'^categoria/(?P<slug>[^\.]+).html',
+        r'^(?P<slug>(artigo)|(noticia))s/?',
         view_category,
-        name='view_blog_category')
+        name='view_blog_category'),
+    url(r'^', include('cms.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
