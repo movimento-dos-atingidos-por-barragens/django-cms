@@ -7,13 +7,28 @@
     <div class="container fill-height">
         <div class="row">
             <div class="col-lg-12">
-              <h2>{{ post.hat }}</h2>
-              <h1>{{ post.title }}</h1>
-              <h4>{{ post.subtitle }}</h4>
-              {{ post.author }} | {{ post.posted|date:"d M, Y" }}
+              <p class="post-hat">{{ post.hat }}</p>
+              <p class="post-title">{{ post.title }}</p>
+              <p class="post-body post-subtitle">{{ post.subtitle }}</p>
               <img src="{{ post.cover_image.url }}">
-              {{ post.cover_image.default_caption }} | {{ post.cover_image.author }}
-              <p>{{ post.body }}</p>
+              <p class="post-caption post-image-caption">
+                {{ post.cover_image.default_caption }} | {{ post.cover_image.author }}
+              </p>
+              <p class="post-caption">
+                {{ post.author }} | {{ post.posted|date:"d M, Y" }}
+              </p>
+              <div class="post-body">
+                {{ post.body }}
+              </div>
+              <div class="share-container">
+                <p class="share-title">Compartilhe</p>
+                <a title="Compartilhe no Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ post.get_absolute_url }}">
+                  <img class="share-icon" src="/static/images/share-facebook.svg" alt="Compartilhe no Facebook">
+                </a>
+                <a title="Compartilhe no Twitter" target="_blank" href="https://twitter.com/share?url={{ post.get_absolute_url }}">
+                  <img class="share-icon" src="/static/images/share-twitter.svg" alt="Compartilhe no Twitter">
+                </a>
+              </div>
             </div>
         </div>
     </div>
