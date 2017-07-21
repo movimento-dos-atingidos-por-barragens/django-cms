@@ -51,6 +51,12 @@ check that the installation is ok
 python manage.py cms check
 ```
 
+if you have modified any database models/schemas, run db migration
+```bash
+python manage.py makemigrantions
+python manage.py migrate
+```
+
 start the server
 ```bash
 python manage.py runserver 0.0.0.0:8000
