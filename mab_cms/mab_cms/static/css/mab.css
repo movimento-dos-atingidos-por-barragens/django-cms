@@ -87,36 +87,48 @@ img {
 	max-width: 900px;
 }
 
-.post-hat {
+.post-margin {
 	margin: 0 0 32px;
+}
+
+.post-font {
+	font: 32px "Merriweather Sans";
+}
+
+.post-gray {
 	color: #999;
-	font: bold 32px/1 "Merriweather Sans";
+}
+
+.post-green {
+	color: #009a4f;
+}
+
+.post-black {
+	color: #222;
+}
+
+.post-hat {
+	font-size: 32px;
+	line-height: 1;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
 .post-title {
-	margin: 0 0 32px;
-	color: #009a4f;
-	font: bold 50px/1 "Merriweather Sans";
+	font-size: 50px;
+	line-height: 1;
+	font-weight: bold;
 }
 
 .post-body {
-	margin: 0 0 32px;
-	color: #222;
-	font: 20px "Merriweather Sans";
+	font-size: 20px;
 }
-.post-body p{
-	margin: 0 0 32px;
-}
-
-.post-subtitle {
+.post-body p {
 	margin: 0 0 32px;
 }
 
 .post-caption {
-	margin: 0 0 32px;
-	color: #999;
-	font: 18px "Merriweather Sans";
+	font-size: 18px;
 }
 
 .post-image-caption {
@@ -128,8 +140,9 @@ img {
 }
 
 .share-title {
-	color: #999;
-	font: bold 20px/1 "Merriweather Sans";
+	font-size: 20px;
+	line-height: 1;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 

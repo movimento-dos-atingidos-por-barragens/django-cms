@@ -7,21 +7,21 @@
     <div class="container fill-height">
         <div class="row">
             <div class="col-lg-12">
-              <p class="post-hat">{{ post.hat }}</p>
-              <p class="post-title">{{ post.title }}</p>
-              <p class="post-body post-subtitle">{{ post.subtitle }}</p>
+              <p class="post-hat post-font post-margin post-gray">{{ post.hat }}</p>
+              <p class="post-title post-font post-margin post-green">{{ post.title }}</p>
+              <p class="post-body post-font post-margin post-black">{{ post.subtitle }}</p>
               <img src="{{ post.cover_image.url }}">
-              <p class="post-caption post-image-caption">
+              <p class="post-caption post-image-caption post-font post-gray">
                 {{ post.cover_image.default_caption }} | {{ post.cover_image.author }}
               </p>
-              <p class="post-caption">
+              <p class="post-caption post-font post-margin post-gray">
                 {{ post.author }} | {{ post.posted|date:"d M, Y" }}
               </p>
-              <div class="post-body">
+              <div class="post-body post-font post-margin post-black">
                 {{ post.body }}
               </div>
               <div class="share-container">
-                <p class="share-title">Compartilhe</p>
+                <p class="share-title post-font post-gray">Compartilhe</p>
                 <a title="Compartilhe no Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ post.get_absolute_url }}">
                   <img class="share-icon" src="/static/images/share-facebook.svg" alt="Compartilhe no Facebook">
                 </a>
